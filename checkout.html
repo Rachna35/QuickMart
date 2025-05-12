@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - QuickMart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">QuickMart</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="enroll.html">Become a Delivery Partner</a>
+            <a href="delivery-partner.html">Partner Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <section class="checkout">
+            <h2>Checkout</h2>
+            <div id="cart-items">
+                <div id="groceries">
+                    <h3>Groceries</h3>
+                    <ul id="groceries-list"></ul>
+                </div>
+                <div id="medicines">
+                    <h3>Medicines</h3>
+                    <ul id="medicines-list"></ul>
+                </div>
+                <div id="stationery">
+                    <h3>Stationery</h3>
+                    <ul id="stationery-list"></ul>
+                </div>
+            </div>
+            <div class="cart-breakdown">
+                <p>Subtotal: ₹<span id="cart-subtotal">0.00</span></p>
+                <p>GST (5%): ₹<span id="cart-gst">0.00</span></p>
+                <p>Delivery Charge: ₹<span id="cart-delivery">0.00</span></p>
+                <p class="total-price">Total: ₹<span id="cart-total">0.00</span></p>
+            </div>
+            <button onclick="clearCart()" class="clear-cart">Clear Cart</button>
+            <form id="checkout-form" onsubmit="event.preventDefault(); placeOrder();">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" required>
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>l
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 QuickMart. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

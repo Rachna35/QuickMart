@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Partner Dashboard - QuickMart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">QuickMart</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="enroll.html">Become a Delivery Partner</a>
+            <a href="delivery-partner.html">Partner Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <section class="partner-dashboard">
+            <h2>Delivery Partner Dashboard</h2>
+            <div class="partner-id">
+                <label for="partnerIdInput">Partner ID:</label>
+                <input type="text" id="partnerIdInput" placeholder="Enter your Partner ID (e.g., X7B4N8)">
+                <button onclick="submitPartnerId()">Submit</button>
+            </div>
+            <h3>Orders</h3>
+            <div id="orders"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 QuickMart. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

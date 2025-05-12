@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - QuickMart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">QuickMart</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="enroll.html">Become a Delivery Partner</a>
+            <a href="delivery-partner.html">Partner Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            <h2>Shop Our Products</h2>
+            <div class="cart-summary">
+                <p>Cart: <span id="cart-count">0</span> items | Subtotal: ₹<span id="cart-subtotal">0.00</span> | GST (5%): ₹<span id="cart-gst">0.00</span> | Delivery: ₹<span id="cart-delivery">0.00</span> | Total: ₹<span id="cart-total">0.00</span></p>
+            </div>
+
+            <!-- Groceries Section -->
+            <div class="category-section">
+                <h3>Groceries</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-category="groceries">
+                        <img src="https://via.placeholder.com/150" alt="Milk">
+                        <h3>Milk (1L)</h3>
+                        <p>₹50.00</p>
+                        <button onclick="addToCart('Milk (1L)', 50.00, 'groceries')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="groceries">
+                        <img src="https://via.placeholder.com/150" alt="Bread">
+                        <h3>Bread (Whole Wheat)</h3>
+                        <p>₹40.00</p>
+                        <button onclick="addToCart('Bread (Whole Wheat)', 40.00, 'groceries')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="groceries">
+                        <img src="https://via.placeholder.com/150" alt="Eggs">
+                        <h3>Eggs (12 pcs)</h3>
+                        <p>₹80.00</p>
+                        <button onclick="addToCart('Eggs (12 pcs)', 80.00, 'groceries')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="groceries">
+                        <img src="https://via.placeholder.com/150" alt="Rice">
+                        <h3>Rice (1kg)</h3>
+                        <p>₹60.00</p>
+                        <button onclick="addToCart('Rice (1kg)', 60.00, 'groceries')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="groceries">
+                        <img src="https://via.placeholder.com/150" alt="Apples">
+                        <h3>Apples (1kg)</h3>
+                        <p>₹150.00</p>
+                        <button onclick="addToCart('Apples (1kg)', 150.00, 'groceries')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medicines Section -->
+            <div class="category-section">
+                <h3>Medicines</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-category="medicines">
+                        <img src="https://via.placeholder.com/150" alt="Paracetamol">
+                        <h3>Paracetamol (10 tabs)</h3>
+                        <p>₹30.00</p>
+                        <button onclick="addToCart('Paracetamol (10 tabs)', 30.00, 'medicines')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="medicines">
+                        <img src="https://via.placeholder.com/150" alt="Cough Syrup">
+                        <h3>Cough Syrup (100ml)</h3>
+                        <p>₹100.00</p>
+                        <button onclick="addToCart('Cough Syrup (100ml)', 100.00, 'medicines')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="medicines">
+                        <img src="https://via.placeholder.com/150" alt="Band-Aids">
+                        <h3>Band-Aids (20 pcs)</h3>
+                        <p>₹50.00</p>
+                        <button onclick="addToCart('Band-Aids (20 pcs)', 50.00, 'medicines')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="medicines">
+                        <img src="https://via.placeholder.com/150" alt="Antacid">
+                        <h3>Antacid (10 tabs)</h3>
+                        <p>₹60.00</p>
+                        <button onclick="addToCart('Antacid (10 tabs)', 60.00, 'medicines')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stationery Section -->
+            <div class="category-section">
+                <h3>Stationery</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-category="stationery">
+                        <img src="https://via.placeholder.com/150" alt="Notebook">
+                        <h3>Notebook (100 pages)</h3>
+                        <p>₹40.00</p>
+                        <button onclick="addToCart('Notebook (100 pages)', 40.00, 'stationery')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="stationery">
+                        <img src="https://via.placeholder.com/150" alt="Pen">
+                        <h3>Pen (Pack of 5)</h3>
+                        <p>₹25.00</p>
+                        <button onclick="addToCart('Pen (Pack of 5)', 25.00, 'stationery')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="stationery">
+                        <img src="https://via.placeholder.com/150" alt="Pencil">
+                        <h3>Pencil (Pack of 10)</h3>
+                        <p>₹30.00</p>
+                        <button onclick="addToCart('Pencil (Pack of 10)', 30.00, 'stationery')">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-category="stationery">
+                        <img src="https://via.placeholder.com/150" alt="Eraser">
+                        <h3>Eraser (Pack of 2)</h3>
+                        <p>₹15.00</p>
+                        <button onclick="addToCart('Eraser (Pack of 2)', 15.00, 'stationery')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <a href="checkout.html" class="cta-button">Proceed to Checkout</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 QuickMart. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

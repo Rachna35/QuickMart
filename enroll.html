@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Delivery Partner - QuickMart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">QuickMart</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="enroll.html">Become a Delivery Partner</a>
+            <a href="delivery-partner.html">Partners Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <section class="enroll">
+            <h2>Join Our Delivery Team</h2>
+            <p>Earn money by delivering essentials in your neighborhood! Please provide accurate details for verification.</p>
+            <form id="enrollment-form" enctype="multipart/form-data">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" placeholder="10-digit phone number" required>
+
+                <label for="aadhaar">Aadhaar Card Number:</label>
+                <input type="text" id="aadhaar" pattern="[0-9]{12}" placeholder="12-digit Aadhaar number" required>
+                <label for="aadhaar-file">Upload Aadhaar Card (PDF/Image):</label>
+                <input type="file" id="aadhaar-file" accept=".pdf,.jpg,.jpeg,.png" required>
+                <label for="pan">PAN Card Number:</label>
+                <input type="text" id="pan" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" placeholder="e.g., ABCDE1234F" required>
+
+                <label for="pan-file">Upload PAN Card (PDF/Image):</label>
+                <input type="file" id="pan-file" accept=".pdf,.jpg,.jpeg,.png" required><br>
+
+                <label for="vehicle">Vehicle Type:</label>
+                <select id="vehicle" required>
+                    <option value="bike">Bike</option>
+                    <option value="scooter">Scooter</option>
+                    <option value="car">Car</option>
+                </select><br>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" required><br>
+
+                <label for="terms">
+                    <input type="checkbox" id="terms" required>
+                    I agree to the <a href="#terms">Terms and Conditions</a>
+                </label><br>
+
+                <button type="submit" onclick="submitEnrollment()">Submit Application</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 QuickMart. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

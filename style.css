@@ -1,0 +1,390 @@
+* {
+    margin:0%;
+    padding:0%;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+.hero {
+    text-align: center;
+    padding: 13em 12em;
+    background-color: #e3f2fd;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.products {
+    padding: 2em;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.product-card {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 0.5em 0;
+}
+
+.product-card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #218838;
+}
+
+.checkout, .enroll {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout form, .enroll form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.checkout form label, .enroll form label {
+    font-weight: bold;
+}
+
+.checkout form input, .checkout form select, .enroll form input, .enroll form select {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout form button, .enroll form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout form button:hover, .enroll form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.enroll form input[type="file"] {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.enroll form label[for="terms"] {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: normal;
+}
+
+.enroll form label[for="terms"] a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.enroll form label[for="terms"] a:hover {
+    text-decoration: underline;
+}
+.cart-summary {
+    text-align: right;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.cart-summary p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-summary span {
+    font-weight: bold;
+    color: #007bff;
+}
+.checkout p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 1em 0;
+}
+
+.checkout p span#cart-total {
+    color: #007bff;
+}
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 1.5em 0;
+    text-align: right;
+}
+
+.total-price span#cart-total {
+    color: #007bff;
+}
+.partner-dashboard {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.partner-id {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.order {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.order button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.order button.accept {
+    background: #28a745;
+    color: white;
+}
+.order button.reject {
+    background: #dc3545;
+    color: white;
+}
+/* Existing styles (ensure these are included) */
+.cart-summary {
+    text-align: right;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.cart-summary p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-summary span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 1.5em 0;
+    text-align: right;
+}
+
+.total-price span#cart-total {
+    color: #007bff;
+}
+
+/* New styles */
+.clear-cart {
+    background: #d1d334;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor
+}
+/* Existing styles */
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 1.5em 0;
+    text-align: right;
+}
+
+.total-price span#cart-total {
+    color: #007bff;
+}
+
+.cart-summary {
+    text-align: right;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+.cart-summary p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-summary span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.clear-cart {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.clear-cart:hover {
+    background-color: #c82333;
+}
+
+.partner-dashboard {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.partner-id {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.order {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.order button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.order button.accept {
+    background: #28a745;
+    color: white;
+}
+
+.order button.reject {
+    background: #dc3545;
+    color: white;
+}
+
+/* New styles for total breakdown */
+.total-breakdown {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.total-breakdown p {
+    margin: 0.5em 0;
+    font-size: 1.1em;
+}
+
+.total-breakdown .total-price {
+    margin-top: 1em;
+    border-top: 1px solid #ccc;
+    padding-top: 0.5em;
+}
